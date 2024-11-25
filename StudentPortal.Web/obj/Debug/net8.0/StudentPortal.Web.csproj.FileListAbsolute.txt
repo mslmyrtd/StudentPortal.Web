@@ -58,3 +58,4 @@ C:\Users\asder\Desktop\Yazılım\.net\StudentPortal.Web\StudentPortal.Web\obj\De
 C:\Users\asder\Desktop\Yazılım\.net\StudentPortal.Web\StudentPortal.Web\obj\Debug\net8.0\StudentPortal.Web.pdb
 C:\Users\asder\Desktop\Yazılım\.net\StudentPortal.Web\StudentPortal.Web\obj\Debug\net8.0\StudentPortal.Web.genruntimeconfig.cache
 C:\Users\asder\Desktop\Yazılım\.net\StudentPortal.Web\StudentPortal.Web\obj\Debug\net8.0\ref\StudentPortal.Web.dll
+C:\Users\asder\Desktop\Yazılım\.net\StudentPortal.Web\StudentPortal.Web\obj\Debug\net8.0\StudentPortal.Web.sourcelink.json
