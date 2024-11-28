@@ -23,13 +23,16 @@ public async Task<IActionResult> Add(AddStudentViewModel viewModel)
     var student =new Student
     {
         Name=viewModel.Name,
+        Grade=viewModel.Grade,
+        ImagePath=viewModel.ImagePath,
         Email=viewModel.Email,
         Phone=viewModel.Phone,
         Subscribed=viewModel.Subscribed,
     };
     await dbContext.Students.AddAsync(student);
     await dbContext.SaveChangesAsync();
-    return View();
+    return RedirectToAction("List", "Students");
+
 }
 [HttpGet]
 public async Task<IActionResult> List()
@@ -50,6 +53,8 @@ public async Task<IActionResult> Edit(Student viewModel)
    var student=await dbContext.Students.FindAsync(viewModel.Id);
     if(student is not null){
         student.Name= viewModel.Name;
+        student.Grade= viewModel.Grade;
+        student.ImagePath= viewModel.ImagePath;
         student.Email= viewModel.Email;
         student.Phone= viewModel.Phone;
         student.Subscribed= viewModel.Subscribed;

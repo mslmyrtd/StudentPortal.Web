@@ -12,7 +12,7 @@ using StudentPortal.Web.Data;
 namespace StudentPortal.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241127204910_InitialMigration")]
+    [Migration("20241128224059_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

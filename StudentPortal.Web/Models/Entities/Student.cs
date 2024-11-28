@@ -7,6 +7,7 @@ namespace StudentPortal.Web.Models.Entities
         public string? Email { get; set; }=String.Empty;
         public int Phone { get; set; }
         public bool Subscribed { get; set; }
-
+        public int Grade { get; set; }
+         public string? ImagePath { get; set; }
     }
 }

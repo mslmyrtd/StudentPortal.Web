@@ -3,20 +3,24 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
+            <th></th>
             <th>Name</th>
+            <th>Grade</th>
+            <th>Photo</th>
             <th>Email</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var student in Model){
+        @foreach(var student in Model.Select((value, index) => new { value, index })){
             <tr>
-                <td>@student.Id</td>
-                <td>@student.Name</td>
-                <td>@student.Email</td>
+                <td>@(student.index + 1)</td>
+                <td>@student.value.Name</td>
+                <td>@student.value.Grade</td>
+                <td><img src="@student.value.ImagePath"  class="w-25  rounded " style="height: 35px;" /></td>
+                <td>@student.value.Email</td>
                 <td>
-                    <a asp-controller="Students" asp-action="Edit" asp-route-id="@student.Id" class="btn btn-primary">Edit</a>
+                    <a asp-controller="Students" asp-action="Edit" asp-route-id="@student.value.Id" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
         }
